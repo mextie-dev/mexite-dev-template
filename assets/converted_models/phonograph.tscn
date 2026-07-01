@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://fcqgo0xnes8a"]
+
+[ext_resource type="PackedScene" uid="uid://dhm710vuthxj6" path="res://assets/raw/models/phonograph.glb" id="1_kwh4j"]
+[ext_resource type="Material" uid="uid://du7c4tuhfekiy" path="res://assets/materials/purple_wood.tres" id="2_pyibi"]
+[ext_resource type="Material" uid="uid://besy8o3ssbnf6" path="res://assets/materials/record.tres" id="3_25rvk"]
+[ext_resource type="Texture2D" uid="uid://c8uj314e1you4" path="res://assets/raw/textures/black_specks.png" id="4_qcxex"]
+[ext_resource type="Material" uid="uid://b6amw4rg88rah" path="res://assets/materials/mirror.tres" id="5_3h4e0"]
+[ext_resource type="Material" uid="uid://bw25emym5je68" path="res://assets/materials/gold.tres" id="6_023h3"]
+[ext_resource type="Texture2D" uid="uid://c78ull80myre6" path="res://assets/raw/textures/note.png" id="7_25rvk"]
+[ext_resource type="Texture2D" uid="uid://bmxucbh8pyerv" path="res://assets/raw/textures/gold.png" id="8_qcxex"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3gdd"]
+albedo_color = Color(1, 0, 1, 1)
+albedo_texture = ExtResource("4_qcxex")
+uv1_scale = Vector3(27.39, 27.39, 27.39)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_civ4i"]
+albedo_texture = ExtResource("7_25rvk")
+uv1_scale = Vector3(-5.915, -5.915, -5.915)
+uv1_offset = Vector3(0.075, -0.13, 1.175)
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3h4e0"]
+cull_mode = 2
+albedo_texture = ExtResource("8_qcxex")
+uv1_scale = Vector3(0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_25rvk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("top_label:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottom_label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("record:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 6.2831855, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qcxex"]
+resource_name = "spinning_record"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("top_label:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottom_label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("record:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3h4e0"]
+_data = {
+&"RESET": SubResource("Animation_25rvk"),
+&"spinning_record": SubResource("Animation_qcxex")
+}
+
+[node name="Phonograph" unique_id=1036069481 instance=ExtResource("1_kwh4j")]
+
+[node name="phono base" parent="." index="0" unique_id=665824670]
+material_override = ExtResource("2_pyibi")
+
+[node name="record" parent="." index="1" unique_id=1345174511]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, 0.12971966, 0.0003015995)
+material_override = ExtResource("3_25rvk")
+
+[node name="spinnet" parent="." index="2" unique_id=1308531770]
+material_override = ExtResource("5_3h4e0")
+
+[node name="arm_base" parent="." index="3" unique_id=345842564]
+material_override = SubResource("StandardMaterial3D_b3gdd")
+
+[node name="arm" parent="." index="4" unique_id=2116004884]
+material_override = ExtResource("5_3h4e0")
+
+[node name="the horn" parent="." index="5" unique_id=73022598]
+material_override = ExtResource("6_023h3")
+
+[node name="bottom_label" parent="." index="6" unique_id=716935168]
+material_override = SubResource("StandardMaterial3D_civ4i")
+
+[node name="top_label" parent="." index="7" unique_id=1182368749]
+material_override = SubResource("StandardMaterial3D_3h4e0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8" unique_id=632719161]
+libraries/ = SubResource("AnimationLibrary_3h4e0")
+autoplay = &"spinning_record"

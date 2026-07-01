@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cu5q0oev3jh40"]
+
+[ext_resource type="PackedScene" uid="uid://bnonmtisyi8lb" path="res://assets/raw/models/tree_pack_1.1/tree_pack_1.1/models/tree06.fbx" id="1_d843p"]
+[ext_resource type="Texture2D" uid="uid://c85wwpxb7awin" path="res://assets/raw/models/tree_pack_1.1/tree_pack_1.1/textures/tree06.png" id="2_8lh6x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lh6x"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_8lh6x")
+texture_filter = 0
+
+[node name="tree06" unique_id=848937823 instance=ExtResource("1_d843p")]
+
+[node name="tree06" parent="." index="0" unique_id=228448183]
+material_override = SubResource("StandardMaterial3D_8lh6x")

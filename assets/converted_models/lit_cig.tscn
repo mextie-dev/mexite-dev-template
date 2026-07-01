@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cwweiii7gj4f4"]
+
+[ext_resource type="PackedScene" uid="uid://c2tq2fuuiv26p" path="res://assets/raw/models/lit_cig.glb" id="1_8lpm7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lpm7"]
+resource_name = "Material.005"
+cull_mode = 2
+albedo_color = Color(1, 0.5123543, 0.07263742, 1)
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.9063317, 0.29528177, 0.3167221, 1)
+emission_energy_multiplier = 12.07
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddkf6"]
+resource_name = "Material.005"
+cull_mode = 2
+albedo_color = Color(1, 0.5123543, 0.07263742, 1)
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.9063317, 0.29528177, 0.3167221, 1)
+emission_energy_multiplier = 12.07
+
+[node name="lit_cig" unique_id=1621821191 instance=ExtResource("1_8lpm7")]
+
+[node name="end" parent="." index="2" unique_id=214924458]
+material_override = SubResource("StandardMaterial3D_8lpm7")
+
+[node name="lit end" parent="." index="3" unique_id=866247909]
+material_override = SubResource("StandardMaterial3D_ddkf6")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://db8iq20onw46q"]
+
+[ext_resource type="PackedScene" uid="uid://dr5rlecp6808p" path="res://assets/raw/models/dresser.glb" id="1_h0po6"]
+[ext_resource type="Texture2D" uid="uid://6nygtv3nbctv" path="res://assets/raw/textures/purple_wood.png" id="2_did3k"]
+[ext_resource type="Material" uid="uid://bw25emym5je68" path="res://assets/materials/gold.tres" id="3_dcdu2"]
+[ext_resource type="Material" uid="uid://du7c4tuhfekiy" path="res://assets/materials/purple_wood.tres" id="4_jwvvp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gok8q"]
+albedo_color = Color(2.4061394, 2.4061394, 2.4061394, 1)
+albedo_texture = ExtResource("2_did3k")
+uv1_scale = Vector3(-0.035, -0.035, -0.035)
+texture_filter = 0
+
+[node name="dresser2" unique_id=1233560209 instance=ExtResource("1_h0po6")]
+
+[node name="dresser" parent="." index="0" unique_id=983654639]
+material_override = SubResource("StandardMaterial3D_gok8q")
+
+[node name="handles" parent="." index="1" unique_id=1056745892]
+material_override = ExtResource("3_dcdu2")
+
+[node name="drawers" parent="." index="2" unique_id=53348945]
+material_override = ExtResource("4_jwvvp")

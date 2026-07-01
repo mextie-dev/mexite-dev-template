@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bbdc1s47avloj"]
+
+[ext_resource type="PackedScene" uid="uid://cimrh6efmad74" path="res://assets/raw/models/cigarette_box_filled.glb" id="1_orxou"]
+
+[node name="cigarette_box_filled" unique_id=1616414479 instance=ExtResource("1_orxou")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

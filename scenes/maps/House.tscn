@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cwm5pvqs0s55k"]
+
+[ext_resource type="Material" uid="uid://00q2ou7xn5f2" path="res://assets/materials/wood_flo0r.tres" id="1_mxvho"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7d806"]
+size = Vector3(5, 2, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yb3r3"]
+size = Vector3(5.14, 3, 0.3)
+
+[node name="House" type="Node3D" unique_id=244442755]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=2143349896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = ExtResource("1_mxvho")
+mesh = SubResource("BoxMesh_7d806")
+
+[node name="Floor2" type="MeshInstance3D" parent="." unique_id=624590854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = ExtResource("1_mxvho")
+mesh = SubResource("BoxMesh_7d806")
+
+[node name="Wall1" type="MeshInstance3D" parent="." unique_id=1394850588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.5025184)
+mesh = SubResource("BoxMesh_yb3r3")
+
+[node name="Wall2" type="MeshInstance3D" parent="." unique_id=762818536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.4974816)
+mesh = SubResource("BoxMesh_yb3r3")
+
+[node name="Wall3" type="MeshInstance3D" parent="." unique_id=316200138]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5049045, 1, -0.035319448)
+mesh = SubResource("BoxMesh_yb3r3")
+
+[node name="Wall4" type="MeshInstance3D" parent="." unique_id=1272746595]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.4950955, 1, -0.035319448)
+mesh = SubResource("BoxMesh_yb3r3")

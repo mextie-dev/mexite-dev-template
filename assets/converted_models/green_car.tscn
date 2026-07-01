@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dki7wk6s7y355"]
+
+[ext_resource type="PackedScene" uid="uid://cid0ntv70l4h6" path="res://assets/raw/models/Car1fixed.glb" id="1_bwqly"]
+[ext_resource type="Texture2D" uid="uid://da0qh8sgw8elx" path="res://assets/raw/models/PSX_Style_Cars_by_GGBot_(August2023)/Car 01/car-export.png" id="2_oavb0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qygtc"]
+load_path = "res://.godot/imported/car-export.png-6dc59f24b198dc58b63a40ebb8fc76a5.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xt0rg"]
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("CompressedTexture2D_qygtc")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikgi8"]
+next_pass = SubResource("StandardMaterial3D_xt0rg")
+albedo_texture = ExtResource("2_oavb0")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qygtc"]
+cull_mode = 2
+albedo_texture = ExtResource("2_oavb0")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5olu"]
+albedo_color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+roughness = 0.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f5olu"]
+load_path = "res://.godot/imported/car-export.png-6dc59f24b198dc58b63a40ebb8fc76a5.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e58dd"]
+load_path = "res://.godot/imported/car-export.png-6dc59f24b198dc58b63a40ebb8fc76a5.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkaas"]
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("CompressedTexture2D_e58dd")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sa6py"]
+next_pass = SubResource("StandardMaterial3D_lkaas")
+transparency = 2
+alpha_scissor_threshold = 1.0
+alpha_antialiasing_mode = 0
+albedo_texture = SubResource("CompressedTexture2D_f5olu")
+texture_filter = 0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oavb0"]
+load_path = "res://.godot/imported/car-export.png-6dc59f24b198dc58b63a40ebb8fc76a5.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqoxa"]
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("CompressedTexture2D_oavb0")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3uw5"]
+next_pass = SubResource("StandardMaterial3D_iqoxa")
+transparency = 1
+albedo_texture = ExtResource("2_oavb0")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qtp8"]
+shading_mode = 0
+albedo_texture = ExtResource("2_oavb0")
+texture_filter = 0
+
+[node name="GreenCar" unique_id=513904166 instance=ExtResource("1_bwqly")]
+
+[node name="Car" parent="." index="0" unique_id=450769012]
+material_override = SubResource("StandardMaterial3D_ikgi8")
+
+[node name="car roof" parent="." index="1" unique_id=1738884665]
+material_override = SubResource("StandardMaterial3D_qygtc")
+
+[node name="mirror" parent="." index="4" unique_id=1666369374]
+material_override = SubResource("StandardMaterial3D_f5olu")
+
+[node name="front window" parent="." index="5" unique_id=838567672]
+material_override = SubResource("StandardMaterial3D_sa6py")
+
+[node name="windows" parent="." index="7" unique_id=1348809923]
+material_override = SubResource("StandardMaterial3D_c3uw5")
+
+[node name="lights" parent="." index="8" unique_id=2096789624]
+material_override = SubResource("StandardMaterial3D_6qtp8")
