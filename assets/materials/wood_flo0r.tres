@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://00q2ou7xn5f2"]
-
-[ext_resource type="Texture2D" uid="uid://b4vgt8k4rbo35" path="res://assets/raw/textures/n64textures/Planks.png" id="1_b154d"]
-
-[resource]
-albedo_texture = ExtResource("1_b154d")
-uv1_scale = Vector3(13.855, 13.855, 13.855)
-texture_filter = 0

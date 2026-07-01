@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://besy8o3ssbnf6"]
-
-[ext_resource type="Texture2D" uid="uid://c8uj314e1you4" path="res://assets/raw/textures/black_specks.png" id="1_gnr4f"]
-
-[resource]
-albedo_texture = ExtResource("1_gnr4f")
-uv1_scale = Vector3(2.475, 2.475, 2.475)
-texture_filter = 0

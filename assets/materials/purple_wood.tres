@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://du7c4tuhfekiy"]
-
-[ext_resource type="Texture2D" uid="uid://6nygtv3nbctv" path="res://assets/raw/textures/purple_wood.png" id="1_7y66l"]
-
-[resource]
-albedo_color = Color(1.6852883, 1.6852883, 1.6852883, 1)
-albedo_texture = ExtResource("1_7y66l")
-uv1_scale = Vector3(-0.035, -0.035, -0.035)
-texture_filter = 0
